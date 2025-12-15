@@ -5,7 +5,6 @@
 #include <numeric>
 #include <vector>
 
-std::vector <long double> a;
 
 int gcd(int x, int y) {
     while (x != 0 and y != 0) {
@@ -16,17 +15,16 @@ int gcd(int x, int y) {
 }
 
 void is_natural(int* x) {
-    while (*x <= 0) {
+    while (!(std::cin >> *x) || *x <= 0) {
         std::cout << "Please enter natural border N: ";
-        std::cin >> *x;
     }
 }
 
 int main()
 {
+    std::vector <long double> a = {};
     int n{}, ind{}, sz = 10;
     std::cout << "Please enter natural border N: ";
-    std::cin >> n;
     is_natural(&n);
     for (int i = n; i > 0; i--) {
         for (int j = 1; j < i; j++) {
