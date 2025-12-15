@@ -6,9 +6,8 @@
 #include <vector>
 
 void is_natural(long long* x) {
-    while (*x <= 0) {
+    while (!(std::cin >> *x) || *x <= 0) {
         std::cout << "Please enter natural border N: ";
-        std::cin >> *x;
     }
 }
 
@@ -16,7 +15,6 @@ int main()
 {
     long long n{}, x{}, sqx, k{};
     std::cout << "Please enter natural border N: ";
-    std::cin >> n;
     is_natural(&n);
     for (long long i = 1; i < n; i++) {
         for (long long j = 1; j < n; j++) {
