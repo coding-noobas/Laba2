@@ -6,9 +6,8 @@
 #include <vector>
 
 void is_natural(int* x) {
-    while (*x <= 0) {
+    while (!(std::cin >> *x) || *x <= 0) {
         std::cout << "Enter number of your digit: ";
-        std::cin >> *x;
     }
 }
 
@@ -16,7 +15,6 @@ int main()
 {
     int n{}, n1{}, x{ 0 }, y{ 1 }, num{};
     std::cout << "Enter number of your digit: ";
-    std::cin >> n;
     is_natural(&n);
     if (n < 10) {
         std::cout << n << "\n";
@@ -30,7 +28,7 @@ int main()
     }
     n1 += x * y - 1;
     num = y / 9 + n1 / x;
-    std::cout << num << " " << n1 % x << "\n";
+    //std::cout << num << " " << n1 % x << "\n";
     y = n1 % x;
     for (int i = 0; i < x - y - 1; i++) {
         num /= 10;
@@ -38,4 +36,4 @@ int main()
     std::cout << num % 10 << "\n";
     return 0;
 }
-//Åñëè ÿ ïğàâèëüíî ïîíÿë çàäà÷à èìååò ââèäó ğÿä âèäà : 1 2 3 4 5 6 7 8 9 1 0 1 1 1 2 1 3 1 4 1 5 ...(òî åñòü êàæäîå ÷èñëî ğàçáèòî íà öèôğû)
+//Ğ•ÑĞ»Ğ¸ Ñ Ğ¿Ñ€Ğ°Ğ²Ğ¸Ğ»ÑŒĞ½Ğ¾ Ğ¿Ğ¾Ğ½ÑĞ» Ğ·Ğ°Ğ´Ğ°Ñ‡Ğ° Ğ¸Ğ¼ĞµĞµÑ‚ Ğ²Ğ²Ğ¸Ğ´Ñƒ Ñ€ÑĞ´ Ğ²Ğ¸Ğ´Ğ° : 1 2 3 4 5 6 7 8 9 1 0 1 1 1 2 1 3 1 4 1 5 ...(Ñ‚Ğ¾ ĞµÑÑ‚ÑŒ ĞºĞ°Ğ¶Ğ´Ğ¾Ğµ Ñ‡Ğ¸ÑĞ»Ğ¾ Ñ€Ğ°Ğ·Ğ±Ğ¸Ñ‚Ğ¾ Ğ½Ğ° Ñ†Ğ¸Ñ„Ñ€Ñ‹)
