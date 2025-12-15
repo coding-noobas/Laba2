@@ -4,9 +4,8 @@
 #include <algorithm>
 
 void is_natural(int* x, int* y) {
-    while (*x <= 0 or *y <= 0) {
+    while (!(std::cin >> *x >> *y) || *x <= 0 || *y <= 0) {
         std::cout << "Please enter borders of segment: ";
-        std::cin >> *x >> *y;
     }
 }
 
