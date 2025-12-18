@@ -8,6 +8,8 @@
 void is_natural(long long* x) {
     while (!(std::cin >> *x) || *x <= 0) {
         std::cout << "Please enter natural border N: ";
+        std::cin.clear();
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
     }
 }
 
@@ -26,3 +28,4 @@ int main()
     //std::cout << k << "\n";
     return 0;
 }
+
