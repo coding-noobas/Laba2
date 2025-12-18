@@ -6,6 +6,8 @@
 void is_natural(int* x, int* y) {
     while (!(std::cin >> *x >> *y) || *x <= 0 || *y <= 0) {
         std::cout << "Please enter borders of segment: ";
+        std::cin.clear();
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
     }
 }
 
@@ -49,3 +51,4 @@ int main()
     std::cout << "\n";
     return 0;
 }
+
