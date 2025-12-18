@@ -17,6 +17,8 @@ int gcd(int x, int y) {
 void is_natural(int* x) {
     while (!(std::cin >> *x) || *x <= 0) {
         std::cout << "Please enter natural border N: ";
+        std::cin.clear();
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
     }
 }
 
@@ -37,3 +39,4 @@ int main()
     }
     return 0;
 }
+
