@@ -8,6 +8,8 @@
 void is_natural(int* x) {
     while (!(std::cin >> *x) || *x <= 0) {
         std::cout << "Enter number of your digit: ";
+        std::cin.clear();
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
     }
 }
 
@@ -37,3 +39,4 @@ int main()
     return 0;
 }
 //Если я правильно понял задача имеет ввиду ряд вида : 1 2 3 4 5 6 7 8 9 1 0 1 1 1 2 1 3 1 4 1 5 ...(то есть каждое число разбито на цифры)
+
